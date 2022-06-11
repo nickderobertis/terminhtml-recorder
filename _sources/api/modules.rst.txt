@@ -1,0 +1,7 @@
+terminhtml_recorder
+===================
+
+.. toctree::
+   :maxdepth: 4
+
+   terminhtml_recorder

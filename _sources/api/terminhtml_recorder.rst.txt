@@ -1,0 +1,51 @@
+terminhtml\_recorder package
+============================
+
+.. automodule:: terminhtml_recorder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+terminhtml\_recorder.converter module
+-------------------------------------
+
+.. automodule:: terminhtml_recorder.converter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+terminhtml\_recorder.formats module
+-----------------------------------
+
+.. automodule:: terminhtml_recorder.formats
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+terminhtml\_recorder.logger module
+----------------------------------
+
+.. automodule:: terminhtml_recorder.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+terminhtml\_recorder.recorder module
+------------------------------------
+
+.. automodule:: terminhtml_recorder.recorder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+terminhtml\_recorder.temp\_path module
+--------------------------------------
+
+.. automodule:: terminhtml_recorder.temp_path
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
