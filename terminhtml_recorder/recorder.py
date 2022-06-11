@@ -27,7 +27,9 @@ class Recording:
         elif new_format == OutputFormat.GIF:
             convert_video_to_gif(self.path, out_path, delay=delay)
             return Recording(path=out_path, format=new_format)
-        raise NotImplementedError(f"Conversion from {self.format} to {new_format} not implemented")
+        raise NotImplementedError(
+            f"Conversion from {self.format} to {new_format} not implemented"
+        )
 
 
 @dataclass
