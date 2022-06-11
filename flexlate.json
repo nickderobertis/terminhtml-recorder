@@ -14,7 +14,26 @@
   "applied_templates": [
     {
       "name": "copier-pypi-sphinx-flexlate",
-      "data": {},
+      "data": {
+        "package_name": "terminhtml-recorder",
+        "package_directory": "terminhtml_recorder",
+        "full_name": "TerminHTML Recorder",
+        "repo_name": "terminhtml-recorder",
+        "repo_username": "nickderobertis",
+        "short_description": "Create video and image files via TerminHTML rather than HTML/CSS/JS",
+        "main_branch_name": "main",
+        "package_author": "Nick DeRobertis",
+        "author_email": "derobertis.nick@gmail.com",
+        "google_analytics_id": "",
+        "os_support": [
+          "ubuntu",
+          "macos",
+          "windows"
+        ],
+        "minimum_python_version": "3.8",
+        "logo_url": "",
+        "install_packages": ""
+      },
       "version": "d8d93c97d6579aa7fcf2b9c58f1a10a274c6566e",
       "add_mode": "local",
       "root": "."
