@@ -49,7 +49,7 @@ def record(
         help="Path of file to write recording to. Defaults to terminhtml.<output-format>",
         show_default=False,
     ),
-    output_format: Optional[OutputFormat] = typer.Option(
+    output_format: OutputFormat = typer.Option(
         OutputFormat.GIF, "--format", "-f", help="Format of recording"
     ),
     delay: float = typer.Option(
