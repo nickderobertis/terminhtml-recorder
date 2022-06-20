@@ -9,23 +9,38 @@ from terminhtml_recorder.converter import convert_video_to_gif
 from terminhtml_recorder.formats import OutputFormat
 from terminhtml_recorder.logger import log
 from terminhtml_recorder.temp_path import create_temp_path
+from terminhtml_recorder.video import Video
 
 
 @dataclass
 class Recording:
-    path: Path
+    video: Video
     format: OutputFormat
 
+    @classmethod
+    def from_path(cls, path: Path, format: OutputFormat) -> "Recording":
+        return cls(video=Video.from_path(path), format=format)
+
+    @property
+    def path(self) -> Path:
+        return self.video.path
+
     def convert_to(
-        self, new_format: OutputFormat, out_path: Path, delay: float = 1.1
+        self,
+        new_format: OutputFormat,
+        out_path: Path,
+        begin_after: float = 1.1,
+        resize: float = 0.7,
+        fps: int = 10,
     ) -> "Recording":
+        clip = self.video.transform_clip(begin_after, resize)
         if new_format == self.format:
             shutil.copy(self.path, out_path)
             # TODO: need to trim for delay in webm output
-            return Recording(path=out_path, format=new_format)
+            return Recording.from_path(path=out_path, format=new_format)
         elif new_format == OutputFormat.GIF:
-            convert_video_to_gif(self.path, out_path, delay=delay)
-            return Recording(path=out_path, format=new_format)
+            convert_video_to_gif(clip, out_path, fps=fps)
+            return Recording.from_path(path=out_path, format=new_format)
         raise NotImplementedError(
             f"Conversion from {self.format} to {new_format} not implemented"
         )
@@ -62,7 +77,9 @@ class TerminHTMLRecorder:
         self,
         out_path: Union[str, Path],
         format: OutputFormat = OutputFormat.GIF,
-        delay: float = 1.1,
+        begin_after: float = 1.1,
+        resize: float = 0.7,
+        fps: int = 10,
     ) -> Recording:
         with create_temp_path() as temp_path:
             log.info(f"Creating recording in {temp_path}")
@@ -85,9 +102,15 @@ class TerminHTMLRecorder:
                 browser.close()
 
             for video in temp_path.glob("*.webm"):
-                return Recording(
+                return Recording.from_path(
                     path=video,
                     format=OutputFormat.WEBM,
-                ).convert_to(format, Path(out_path), delay=delay)
+                ).convert_to(
+                    format,
+                    Path(out_path),
+                    begin_after=begin_after,
+                    resize=resize,
+                    fps=fps,
+                )
 
             raise ValueError(f"No video found in temp_path {temp_path}")

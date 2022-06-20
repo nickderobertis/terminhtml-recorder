@@ -52,12 +52,16 @@ def record(
     output_format: OutputFormat = typer.Option(
         OutputFormat.GIF, "--format", "-f", help="Format of recording"
     ),
-    delay: float = typer.Option(
+    begin_after: float = typer.Option(
         1.1,
-        "--delay",
-        "-d",
+        "--begin-after",
+        "-b",
         help="Delay from browser start until recording start. Increase if you see an uninitialized terminal at the start. Decrease if you don't see the beginning of typing.",
     ),
+    resize: float = typer.Option(
+        0.7, "--resize", "-r", help="Resize video to this fraction of original size"
+    ),
+    fps: int = typer.Option(10, "--fps", "-p", help="Frames per second of video"),
     interactor: PageInteractor = default_page_interactor,
 ):
     """
@@ -82,7 +86,9 @@ def record(
     out_path = out_path or Path("terminhtml").with_suffix(f".{output_format.value}")
 
     recorder = TerminHTMLRecorder(html, interactor)
-    recorder.record(out_path, format=output_format, delay=delay)
+    recorder.record(
+        out_path, format=output_format, begin_after=begin_after, resize=resize, fps=fps
+    )
 
 
 if __name__ == "__main__":
