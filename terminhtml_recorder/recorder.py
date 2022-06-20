@@ -51,12 +51,6 @@ PageInteractor = Callable[[PageLocators], None]
 
 
 def default_page_interactor(page_locators: PageLocators) -> None:
-    time.sleep(1)
-    page_locators.speed_up.click()
-    time.sleep(1)
-    page_locators.speed_up.click()
-    time.sleep(0.5)
-    page_locators.speed_down.click()
     page_locators.restart.wait_for()
 
 
