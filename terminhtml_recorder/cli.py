@@ -16,7 +16,7 @@ from terminhtml_recorder.recorder import (
 )
 
 cli = CLIConf(
-    name="terminhtml-recorder",
+    name="terminrec",
     help="Record TerminHTML animated output to a video file.",
 )
 
