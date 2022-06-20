@@ -63,6 +63,7 @@ PACKAGE_INSTALL_REQUIRES = [
     "playwright",
     "rich",
     "terminhtml",
+    "cliconf",
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
