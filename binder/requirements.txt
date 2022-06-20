@@ -1,5 +1,5 @@
-terminhtml
+terminhtml-recorder
 playwright
 moviepy
-terminhtml-recorder
 rich
+terminhtml

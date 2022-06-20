@@ -9,10 +9,26 @@ terminhtml\_recorder package
 Submodules
 ----------
 
+terminhtml\_recorder.cli module
+-------------------------------
+
+.. automodule:: terminhtml_recorder.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 terminhtml\_recorder.converter module
 -------------------------------------
 
 .. automodule:: terminhtml_recorder.converter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+terminhtml\_recorder.exc module
+-------------------------------
+
+.. automodule:: terminhtml_recorder.exc
    :members:
    :undoc-members:
    :show-inheritance:
