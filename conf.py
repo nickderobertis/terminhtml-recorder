@@ -20,7 +20,9 @@ REPO_MAINTAINERS = [
 ]
 
 # Short description of the package
-PACKAGE_SHORT_DESCRIPTION = "Create video and image files via TerminHTML rather than HTML/CSS/JS"
+PACKAGE_SHORT_DESCRIPTION = (
+    "Create video and image files via TerminHTML rather than HTML/CSS/JS"
+)
 
 # Long description of the package for PyPI
 # Set to 'auto' to use README.md as the PyPI description
@@ -97,7 +99,7 @@ DOCS_OTHER_MOCK_IMPORTS = [
 
 # Add any Python scripts which should be exposed to the command line in the format:
 # CONSOLE_SCRIPTS = ['funniest-joke=funniest.command_line:main']
-CONSOLE_SCRIPTS = ([],)
+CONSOLE_SCRIPTS = (["terminrec=terminhtml_recorder.cli:cli"],)
 
 # Add any arbitrary scripts to be exposed to the command line in the format:
 # SCRIPTS = ['bin/funniest-joke']
