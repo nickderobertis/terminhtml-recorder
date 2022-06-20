@@ -1,5 +1,6 @@
+cliconf
 terminhtml-recorder
+terminhtml
+rich
 playwright
 moviepy
-rich
-terminhtml
