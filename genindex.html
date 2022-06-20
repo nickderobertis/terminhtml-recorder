@@ -46,7 +46,7 @@
   
   
   
-    <title>Index &#8212; terminhtml-recorder 1.0.0a3 documentation</title>
+    <title>Index &#8212; terminhtml-recorder 1.0.0a4 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/material.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="index.html" title="terminhtml-recorder 1.0.0a3 documentation"
+        <a href="index.html" title="terminhtml-recorder 1.0.0a4 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -174,7 +174,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a3 documentation</a></li>
+          <li class="md-tabs__item"><a href="index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a4 documentation</a></li>
       </ul>
     </div>
   </nav>
@@ -186,13 +186,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="index.html" title="terminhtml-recorder 1.0.0a3 documentation" class="md-nav__button md-logo">
+    <a href="index.html" title="terminhtml-recorder 1.0.0a4 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="index.html"
-       title="terminhtml-recorder 1.0.0a3 documentation">terminhtml-recorder</a>
+       title="terminhtml-recorder 1.0.0a4 documentation">terminhtml-recorder</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/terminhtml-recorder" title="Go to repository" class="md-source" data-md-source="github">
@@ -279,6 +279,7 @@
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
  
 </div>
@@ -292,6 +293,8 @@
 </li>
         <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.TerminHTMLRecorder.__init__">(terminhtml_recorder.recorder.TerminHTMLRecorder method)</a>
 </li>
+        <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video.__init__">(terminhtml_recorder.video.Video method)</a>
+</li>
       </ul></li>
   </ul></td>
 </tr></table>
@@ -301,10 +304,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.logger.LoggingConfig.cast_log_level">cast_log_level() (terminhtml_recorder.logger.LoggingConfig class method)</a>
 </li>
-      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.convert_to">convert_to() (terminhtml_recorder.recorder.Recording method)</a>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video.clip">clip (terminhtml_recorder.video.Video attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.convert_to">convert_to() (terminhtml_recorder.recorder.Recording method)</a>
+</li>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.converter.convert_video_to_gif">convert_video_to_gif() (in module terminhtml_recorder.converter)</a>
 </li>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.temp_path.create_temp_path">create_temp_path() (in module terminhtml_recorder.temp_path)</a>
@@ -337,10 +342,16 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.format">format (terminhtml_recorder.recorder.Recording attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.PageLocators.from_page">from_page() (terminhtml_recorder.recorder.PageLocators class method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.from_path">from_path() (terminhtml_recorder.recorder.Recording class method)</a>
+
+      <ul>
+        <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video.from_path">(terminhtml_recorder.video.Video class method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -397,6 +408,8 @@
 </li>
         <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.temp_path">terminhtml_recorder.temp_path</a>
 </li>
+        <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.video">terminhtml_recorder.video</a>
+</li>
       </ul></li>
   </ul></td>
 </tr></table>
@@ -424,8 +437,12 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.path">path (terminhtml_recorder.recorder.Recording attribute)</a>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.path">path (terminhtml_recorder.recorder.Recording property)</a>
+
+      <ul>
+        <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video.path">(terminhtml_recorder.video.Video attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -486,8 +503,6 @@
         <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.formats">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     terminhtml_recorder.logger
 
@@ -495,6 +510,8 @@
         <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.logger">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     terminhtml_recorder.recorder
 
@@ -509,9 +526,30 @@
         <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.temp_path">module</a>
 </li>
       </ul></li>
+      <li>
+    terminhtml_recorder.video
+
+      <ul>
+        <li><a href="api/terminhtml_recorder.html#module-terminhtml_recorder.video">module</a>
+</li>
+      </ul></li>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.TerminHTMLRecorder">TerminHTMLRecorder (class in terminhtml_recorder.recorder)</a>
 </li>
       <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.exc.TerminHTMLRecorderException">TerminHTMLRecorderException</a>
+</li>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video.transform_clip">transform_clip() (terminhtml_recorder.video.Video method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.video.Video">Video (class in terminhtml_recorder.video)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.video">video (terminhtml_recorder.recorder.Recording attribute)</a>
 </li>
   </ul></td>
 </tr></table>

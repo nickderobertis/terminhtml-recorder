@@ -65,3 +65,11 @@ terminhtml\_recorder.temp\_path module
    :undoc-members:
    :show-inheritance:
 
+terminhtml\_recorder.video module
+---------------------------------
+
+.. automodule:: terminhtml_recorder.video
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

@@ -46,7 +46,7 @@
   
   
   
-    <title>terminhtml_recorder.recorder &#8212; terminhtml-recorder 1.0.0a3 documentation</title>
+    <title>terminhtml_recorder.recorder &#8212; terminhtml-recorder 1.0.0a4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -88,7 +88,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../index.html" title="terminhtml-recorder 1.0.0a3 documentation"
+        <a href="../../index.html" title="terminhtml-recorder 1.0.0a4 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -174,7 +174,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../../index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a3 documentation</a></li>
+          <li class="md-tabs__item"><a href="../../index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a4 documentation</a></li>
           <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Module code</a></li>
       </ul>
     </div>
@@ -187,13 +187,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../index.html" title="terminhtml-recorder 1.0.0a3 documentation" class="md-nav__button md-logo">
+    <a href="../../index.html" title="terminhtml-recorder 1.0.0a4 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="../../index.html"
-       title="terminhtml-recorder 1.0.0a3 documentation">terminhtml-recorder</a>
+       title="terminhtml-recorder 1.0.0a4 documentation">terminhtml-recorder</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/terminhtml-recorder" title="Go to repository" class="md-source" data-md-source="github">
@@ -273,23 +273,38 @@
 <span class="kn">from</span> <span class="nn">terminhtml_recorder.formats</span> <span class="kn">import</span> <span class="n">OutputFormat</span>
 <span class="kn">from</span> <span class="nn">terminhtml_recorder.logger</span> <span class="kn">import</span> <span class="n">log</span>
 <span class="kn">from</span> <span class="nn">terminhtml_recorder.temp_path</span> <span class="kn">import</span> <span class="n">create_temp_path</span>
+<span class="kn">from</span> <span class="nn">terminhtml_recorder.video</span> <span class="kn">import</span> <span class="n">Video</span>
 
 
 <div class="viewcode-block" id="Recording"><a class="viewcode-back" href="../../api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">Recording</span><span class="p">:</span>
-    <span class="n">path</span><span class="p">:</span> <span class="n">Path</span>
+    <span class="n">video</span><span class="p">:</span> <span class="n">Video</span>
     <span class="nb">format</span><span class="p">:</span> <span class="n">OutputFormat</span>
 
+<div class="viewcode-block" id="Recording.from_path"><a class="viewcode-back" href="../../api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.from_path">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_path</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">format</span><span class="p">:</span> <span class="n">OutputFormat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Recording"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">video</span><span class="o">=</span><span class="n">Video</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">path</span>
+
 <div class="viewcode-block" id="Recording.convert_to"><a class="viewcode-back" href="../../api/terminhtml_recorder.html#terminhtml_recorder.recorder.Recording.convert_to">[docs]</a>    <span class="k">def</span> <span class="nf">convert_to</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">new_format</span><span class="p">:</span> <span class="n">OutputFormat</span><span class="p">,</span> <span class="n">out_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span> <span class="n">delay</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.1</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">new_format</span><span class="p">:</span> <span class="n">OutputFormat</span><span class="p">,</span>
+        <span class="n">out_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">,</span>
+        <span class="n">begin_after</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">,</span>
+        <span class="n">resize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">"Recording"</span><span class="p">:</span>
+        <span class="n">clip</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">transform_clip</span><span class="p">(</span><span class="n">begin_after</span><span class="p">,</span> <span class="n">resize</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">new_format</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">:</span>
             <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">out_path</span><span class="p">)</span>
             <span class="c1"># TODO: need to trim for delay in webm output</span>
-            <span class="k">return</span> <span class="n">Recording</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">out_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">new_format</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">Recording</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">out_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">new_format</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">new_format</span> <span class="o">==</span> <span class="n">OutputFormat</span><span class="o">.</span><span class="n">GIF</span><span class="p">:</span>
-            <span class="n">convert_video_to_gif</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">,</span> <span class="n">out_path</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">Recording</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">out_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">new_format</span><span class="p">)</span>
+            <span class="n">convert_video_to_gif</span><span class="p">(</span><span class="n">clip</span><span class="p">,</span> <span class="n">out_path</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">Recording</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">out_path</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">new_format</span><span class="p">)</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">"Conversion from </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">new_format</span><span class="si">}</span><span class="s2"> not implemented"</span>
         <span class="p">)</span></div></div>
@@ -326,7 +341,9 @@
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">out_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span>
         <span class="nb">format</span><span class="p">:</span> <span class="n">OutputFormat</span> <span class="o">=</span> <span class="n">OutputFormat</span><span class="o">.</span><span class="n">GIF</span><span class="p">,</span>
-        <span class="n">delay</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">,</span>
+        <span class="n">begin_after</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">,</span>
+        <span class="n">resize</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="n">fps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Recording</span><span class="p">:</span>
         <span class="k">with</span> <span class="n">create_temp_path</span><span class="p">()</span> <span class="k">as</span> <span class="n">temp_path</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Creating recording in </span><span class="si">{</span><span class="n">temp_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -349,10 +366,16 @@
                 <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
             <span class="k">for</span> <span class="n">video</span> <span class="ow">in</span> <span class="n">temp_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.webm"</span><span class="p">):</span>
-                <span class="k">return</span> <span class="n">Recording</span><span class="p">(</span>
+                <span class="k">return</span> <span class="n">Recording</span><span class="o">.</span><span class="n">from_path</span><span class="p">(</span>
                     <span class="n">path</span><span class="o">=</span><span class="n">video</span><span class="p">,</span>
                     <span class="nb">format</span><span class="o">=</span><span class="n">OutputFormat</span><span class="o">.</span><span class="n">WEBM</span><span class="p">,</span>
-                <span class="p">)</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span><span class="nb">format</span><span class="p">,</span> <span class="n">Path</span><span class="p">(</span><span class="n">out_path</span><span class="p">),</span> <span class="n">delay</span><span class="o">=</span><span class="n">delay</span><span class="p">)</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">convert_to</span><span class="p">(</span>
+                    <span class="nb">format</span><span class="p">,</span>
+                    <span class="n">Path</span><span class="p">(</span><span class="n">out_path</span><span class="p">),</span>
+                    <span class="n">begin_after</span><span class="o">=</span><span class="n">begin_after</span><span class="p">,</span>
+                    <span class="n">resize</span><span class="o">=</span><span class="n">resize</span><span class="p">,</span>
+                    <span class="n">fps</span><span class="o">=</span><span class="n">fps</span><span class="p">,</span>
+                <span class="p">)</span>
 
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No video found in temp_path </span><span class="si">{</span><span class="n">temp_path</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span></div></div>
 </pre></div>

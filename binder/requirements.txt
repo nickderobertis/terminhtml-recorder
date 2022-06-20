@@ -1,6 +1,6 @@
 cliconf
+playwright
 terminhtml-recorder
 terminhtml
-rich
-playwright
 moviepy
+rich

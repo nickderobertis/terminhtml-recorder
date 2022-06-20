@@ -47,7 +47,7 @@
   
   
   
-    <title>terminhtml_recorder package &#8212; terminhtml-recorder 1.0.0a3 documentation</title>
+    <title>terminhtml_recorder package &#8212; terminhtml-recorder 1.0.0a4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -90,7 +90,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="terminhtml-recorder 1.0.0a3 documentation"
+        <a href="../index.html" title="terminhtml-recorder 1.0.0a4 documentation"
            class="md-header-nav__button md-logo">
           
             <i class="md-icon">&#xe869</i>
@@ -176,7 +176,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a3 documentation</a></li>
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">terminhtml-recorder 1.0.0a4 documentation</a></li>
           <li class="md-tabs__item"><a href="modules.html" class="md-tabs__link">terminhtml_recorder</a></li>
       </ul>
     </div>
@@ -189,13 +189,13 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="terminhtml-recorder 1.0.0a3 documentation" class="md-nav__button md-logo">
+    <a href="../index.html" title="terminhtml-recorder 1.0.0a4 documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">&#xe869</i>
       
     </a>
     <a href="../index.html"
-       title="terminhtml-recorder 1.0.0a3 documentation">terminhtml-recorder</a>
+       title="terminhtml-recorder 1.0.0a4 documentation">terminhtml-recorder</a>
   </label>
     <div class="md-nav__source">
       <a href="https://github.com/nickderobertis/terminhtml-recorder" title="Go to repository" class="md-source" data-md-source="github">
@@ -264,6 +264,8 @@
         <li class="md-nav__item"><a href="#module-terminhtml_recorder.recorder" class="md-nav__link">terminhtml_recorder.recorder module</a>
         </li>
         <li class="md-nav__item"><a href="#module-terminhtml_recorder.temp_path" class="md-nav__link">terminhtml_recorder.temp_path module</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-terminhtml_recorder.video" class="md-nav__link">terminhtml_recorder.video module</a>
         </li></ul>
             </nav>
         </li>
@@ -328,6 +330,13 @@
       <a href="#module-terminhtml_recorder.temp_path" class="md-nav__link">terminhtml_recorder.temp_path module</a>
       
     
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="#module-terminhtml_recorder.video" class="md-nav__link">terminhtml_recorder.video module</a>
+      
+    
     </li></ul>
     
     </li></ul>
@@ -364,6 +373,8 @@
         <li class="md-nav__item"><a href="#module-terminhtml_recorder.recorder" class="md-nav__link">terminhtml_recorder.recorder module</a>
         </li>
         <li class="md-nav__item"><a href="#module-terminhtml_recorder.temp_path" class="md-nav__link">terminhtml_recorder.temp_path module</a>
+        </li>
+        <li class="md-nav__item"><a href="#module-terminhtml_recorder.video" class="md-nav__link">terminhtml_recorder.video module</a>
         </li></ul>
             </nav>
         </li>
@@ -394,7 +405,7 @@
 <span id="terminhtml-recorder-converter-module"></span><h2 id="module-terminhtml_recorder.converter">terminhtml_recorder.converter module<a class="headerlink" href="#module-terminhtml_recorder.converter" title="Permalink to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="terminhtml_recorder.converter.convert_video_to_gif">
-<span class="sig-prename descclassname"><span class="pre">terminhtml_recorder.converter.</span></span><span class="sig-name descname"><span class="pre">convert_video_to_gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/converter.html#convert_video_to_gif"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.converter.convert_video_to_gif" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">terminhtml_recorder.converter.</span></span><span class="sig-name descname"><span class="pre">convert_video_to_gif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/converter.html#convert_video_to_gif"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.converter.convert_video_to_gif" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a></p>
@@ -505,15 +516,15 @@
 </dd></dl>
 <dl class="py class">
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">terminhtml_recorder.recorder.</span></span><span class="sig-name descname"><span class="pre">Recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#Recording"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.Recording" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">terminhtml_recorder.recorder.</span></span><span class="sig-name descname"><span class="pre">Recording</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">video</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#Recording"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.Recording" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">video</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.convert_to">
-<span class="sig-name descname"><span class="pre">convert_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#Recording.convert_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.convert_to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">convert_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#Recording.convert_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.convert_to" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#terminhtml_recorder.recorder.Recording" title="terminhtml_recorder.recorder.Recording"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recording</span></code></a></p>
@@ -524,9 +535,27 @@
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.format">
 <span class="sig-name descname"><span class="pre">format</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#terminhtml_recorder.formats.OutputFormat" title="terminhtml_recorder.formats.OutputFormat"><span class="pre">OutputFormat</span></a></em><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.format" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-<dl class="py attribute">
+<dl class="py method">
+<dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.from_path">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#Recording.from_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.from_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#terminhtml_recorder.recorder.Recording" title="terminhtml_recorder.recorder.Recording"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recording</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py property">
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.path">
-<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">Path</span></a></em><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.path" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">Path</span></a></em><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="terminhtml_recorder.recorder.Recording.video">
+<span class="sig-name descname"><span class="pre">video</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#terminhtml_recorder.video.Video" title="terminhtml_recorder.video.Video"><span class="pre">Video</span></a></em><a class="headerlink" href="#terminhtml_recorder.recorder.Recording.video" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
 <dl class="py class">
@@ -539,7 +568,7 @@
 <dd></dd></dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="terminhtml_recorder.recorder.TerminHTMLRecorder.record">
-<span class="sig-name descname"><span class="pre">record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">OutputFormat.GIF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#TerminHTMLRecorder.record"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.TerminHTMLRecorder.record" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">OutputFormat.GIF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">begin_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/recorder.html#TerminHTMLRecorder.record"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.recorder.TerminHTMLRecorder.record" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#terminhtml_recorder.recorder.Recording" title="terminhtml_recorder.recorder.Recording"><code class="xref py py-class docutils literal notranslate"><span class="pre">Recording</span></code></a></p>
@@ -578,6 +607,44 @@ will try to delete the temp directory, but if it fails with an error it will jus
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterator</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></a>]</p>
 </dd>
 </dl>
+</dd></dl>
+</section>
+<section id="module-terminhtml_recorder.video">
+<span id="terminhtml-recorder-video-module"></span><h2 id="module-terminhtml_recorder.video">terminhtml_recorder.video module<a class="headerlink" href="#module-terminhtml_recorder.video" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">terminhtml_recorder.video.</span></span><span class="sig-name descname"><span class="pre">Video</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/video.html#Video"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.video.Video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#terminhtml_recorder.video.Video.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video.clip">
+<span class="sig-name descname"><span class="pre">clip</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">moviepy.editor.VideoFileClip</span></em><a class="headerlink" href="#terminhtml_recorder.video.Video.clip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video.from_path">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/video.html#Video.from_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.video.Video.from_path" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#terminhtml_recorder.video.Video" title="terminhtml_recorder.video.Video"><code class="xref py py-class docutils literal notranslate"><span class="pre">Video</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="(in Python v3.10)"><span class="pre">Path</span></a></em><a class="headerlink" href="#terminhtml_recorder.video.Video.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="terminhtml_recorder.video.Video.transform_clip">
+<span class="sig-name descname"><span class="pre">transform_clip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">begin_after</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/terminhtml_recorder/video.html#Video.transform_clip"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#terminhtml_recorder.video.Video.transform_clip" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">VideoFileClip</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 </dd></dl>
 </section>
 </section>
